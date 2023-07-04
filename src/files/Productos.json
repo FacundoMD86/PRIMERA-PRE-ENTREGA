@@ -1,0 +1,92 @@
+[
+	{
+		"id": 2,
+		"nombre": "sigas 25",
+		"descripcion": "fusion",
+		"precio": "10000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 3,
+		"nombre": "sigas 32",
+		"descripcion": "fusion",
+		"precio": "11000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 4,
+		"nombre": "sigas 40",
+		"descripcion": "fusion",
+		"precio": "12000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 5,
+		"nombre": "sigas 50",
+		"descripcion": "fusion",
+		"precio": "13000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 6,
+		"nombre": "sigas 63",
+		"descripcion": "fusion",
+		"precio": "14000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 7,
+		"nombre": "sigas 75",
+		"descripcion": "fusion",
+		"precio": "15000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 8,
+		"nombre": "sigas 90",
+		"descripcion": "fusion",
+		"precio": "16000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 9,
+		"nombre": "sigas 110",
+		"descripcion": "fusion",
+		"precio": "17000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 10,
+		"nombre": "sigas 20",
+		"descripcion": "fusion",
+		"precio": "8000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	},
+	{
+		"id": 11,
+		"nombre": "sigas 32",
+		"descripcion": "fusion",
+		"precio": "10000",
+		"thumbnail": null,
+		"codigo": "10",
+		"stock": "100"
+	}
+]
