@@ -1,10 +1,11 @@
-import { Router } from "express";
-import ProductManager from "./productos/ProductsManager.js";
+import Router from "express";
+import ProductManager from "../productos/ProductsManager.js";
+
+const ProductRouter = Router();
 
 const productManager = new ProductManager('./src/files/Productos.json');
 const readProducts = productManager.readProduct();
 
-const ProductRouter = Router();
 
 ProductRouter.get("/", async (req, res) => {
     let limit = parseInt(req.query.limit);
