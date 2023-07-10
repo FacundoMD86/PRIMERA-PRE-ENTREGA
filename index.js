@@ -1,25 +1,34 @@
-import ProductsManager from './productos/ProductsManager.js';
+import ProductsManager from '../productos/ProductsManager.js';
+import CartManager from '../carts/CartManager.js';
+
 
 const deposito = new ProductsManager('./files/Productos.json');
+const cartDepo = new CartManager('./files/carts.json');
+
 
 const env = async () => {
     const productos = await deposito.getProduct();
     console.log(productos);
+    const carts = await cartDepo.getCarts();
+    console.log(carts);
 
      const producto = {
         id: '1',
-        nombre: 'sigas 32',
-        descripcion: 'fusion',
-        precio: '10000',
-        thumbnail: null ,
-        codigo: '10',
-        stock: '100'
+        title: 'sigas 32',
+        description: 'fusion',
+        code: '10',
+        price: '10000',
+        status: Boolean,
+        stock: '100',
+        category: 'caños',
+        thumbnail: null 
        
      };
 
      await deposito.createProduct(producto);
     const depositoResult = await deposito.getProduct();
     console.log(depositoResult);
-}
-
-env();
+    await cartDepo.createCarts(producto);
+    const cartDepoResult = await cartDepo.getCarts();
+    console.log(cartDepoResult);
+};
