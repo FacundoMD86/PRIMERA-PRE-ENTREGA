@@ -93,7 +93,7 @@ class ProductManager {
         console.log(error);
     }
   };
-
+  
 };
 
 export default ProductManager
