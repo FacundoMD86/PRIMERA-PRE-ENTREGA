@@ -3,7 +3,7 @@ import ProductManager from "../productos/ProductsManager.js";
 
 const ProductRouter = Router();
 
-const productManager = new ProductManager('./src/files/Productos.json');
+const productManager = new ProductManager("./src/files/Productos.json");
 const readProducts = productManager.readProduct();
 
 

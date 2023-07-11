@@ -1,6 +1,8 @@
 import fs from 'fs';
+import ProductsManager from '../productos/ProductsManager.js';
 
-const path = '.src/files/carts.json'
+const productAll = new ProductsManager
+const path = './src/files/carts.json'
 
 class CartManager {
     constructor(path) {
@@ -18,6 +20,11 @@ class CartManager {
       await fs.promises.writeFile(this.path, JSON.stringify(AllCarts));
       return "Carrito Agregado";
     }*/
+    exist = async (id) => {
+        let carts = await this.readCart();
+        return carts.find(cart => cart.id === id);
+    }
+    
     getCarts = async () => {
         try {
             if (fs.existsSync(this.path)) {                                     
@@ -89,6 +96,18 @@ class CartManager {
         console.log(error);
     }
   };
+
+  addProductInCart = async (cartId, productId) =>{
+    let cartById = await this.exist(cartId);
+    if(!cartById) return "Carrito no encontrado";
+    let productById = await productAll.exist(productId);
+    if(!productById) return "Producto no encontrado";
+    let cartAll = await this.readCart();
+    let cartFilter = cartAll.filter(prod => prod.id != productId);
+    let cartsConcat = [{id: cartId, products:[{id:productById.id, cantidad: 1}]}, ...cartFilter]
+    await this.writeCarts(cartsConcat);
+    return "Producto Agregado al Carrito"
+  }
 
 };
 

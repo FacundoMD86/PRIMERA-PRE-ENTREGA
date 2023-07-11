@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const path = '.src/files/Productos.json'
+const path = "./src/files/Productos.json"
 
 class ProductManager {
     constructor(path) {
@@ -11,6 +11,10 @@ class ProductManager {
       let respuesta = await fs.promises.readFile(this.path, "utf-8");    
       return JSON.parse(respuesta);
     }
+    exist = async (id) => {
+      let products = await this.readProduct();
+      return products.find(product => product.id === id);
+    }  
     writeProducts = async (product) => {
       let products = await fs.promises.readFile(this.path, "utf-8");
       let productsParse = JSON.parse(products);

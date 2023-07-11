@@ -28,6 +28,13 @@ CartRouter.post("/", async (req, res) => {
     res.send(await cartManager.createCarts(newCart));
 });
 
+CartRouter.post("/:cid/products/:pid", async (req, res) => {
+    let cartId = req.params.cid;
+    let productId = req.params.pid;
+    res.send(await cartManager.addProductInCart(cartId, productId));
+});
+
+
 CartRouter.put("/:id", async (req, res) => {
     let id = req.params.id;
     let updateCart = req.body;
