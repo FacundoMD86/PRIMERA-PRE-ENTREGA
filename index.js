@@ -1,5 +1,5 @@
 import ProductsManager from '../productos/ProductsManager.js';
-import CartManager from '../carts/CartManager.js';
+import CartManager from '../productos/CartManager.js';
 
 
 const deposito = new ProductsManager('./files/Productos.json');
